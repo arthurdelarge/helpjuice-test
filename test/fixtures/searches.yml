@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  query: MyString
+  ip_address: MyString
+  search_count: 1
+  last_searched_at: 2024-07-15 18:08:12
+
+two:
+  query: MyString
+  ip_address: MyString
+  search_count: 1
+  last_searched_at: 2024-07-15 18:08:12
