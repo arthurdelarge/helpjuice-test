@@ -1,6 +1,10 @@
 # Simple Search Engine with Analytics
 
-This project is a simple search engine that logs user searches and provides analytics on trending and recent searches.
+This project is a simple search engine that logs user searches and provides analytics on trending and recent searches (5 minutes). Time was a priority, so I did everything in less than 24 hours.
+
+For optimizations, it would be nice to a worker that cleans old searches from users that have exceeded a limit of data. This functionality is not in the code, but would be simple to do it.
+
+Alternatively, I set user searches to be removed once they exceeded the personal limit of 250.
 
 ## Main Dependencies
 
