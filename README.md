@@ -1,24 +1,52 @@
-# README
+# Simple Search Engine with Analytics
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a simple search engine that logs user searches and provides analytics on trending and recent searches.
 
-Things you may want to cover:
+## Main Dependencies
 
-* Ruby version
+- Ruby 3.3.0
+- Rails 7
+- PostgreSQL
 
-* System dependencies
+## Getting Started
 
-* Configuration
+### Setup
 
-* Database creation
+1. **Clone the repository:**
 
-* Database initialization
+    ```bash
+    git clone https://github.com/your-username/simple-search-engine.git
+    cd simple-search-engine
+    ```
 
-* How to run the test suite
+2. **Install the dependencies:**
 
-* Services (job queues, cache servers, search engines, etc.)
+    ```bash
+    bundle install
+    ```
 
-* Deployment instructions
+3. **Set up the database:**
 
-* ...
+    ```bash
+    rails db:create
+    rails db:migrate
+    ```
+
+4. **Start the server:**
+
+    ```bash
+    rails s
+    ```
+
+5. **Navigate to the application in your browser:**
+
+    ```
+    http://localhost:3000
+    ```
+
+### Testing
+
+Run the test suite to ensure everything is working correctly:
+
+```bash
+bundle exec rspec -fd
