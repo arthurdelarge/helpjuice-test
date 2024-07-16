@@ -15,8 +15,8 @@ This project is a simple search engine that logs user searches and provides anal
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/simple-search-engine.git
-    cd simple-search-engine
+    git clone https://github.com/arthurdelarge/helpjuice-test.git
+    cd helpjuice-test
     ```
 
 2. **Install the dependencies:**
