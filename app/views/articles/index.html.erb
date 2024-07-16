@@ -1,0 +1,47 @@
+<body>
+  <div>
+    <button><%= link_to "Analytics", searches_path %></button>
+  </div>
+
+  <div class="box box_gradient text_box">
+    <h2>Send Texts</h2>
+    <%= form_with(url: articles_path, method: :post) do |form| %>
+      <%= form.text_field :text %>
+      <%= form.submit %>
+    <% end %>
+  </div>
+
+  <div class="box box_gradient text_box">
+    <h2>Search</h2>
+    <%= form_with(url: search_articles_path, method: :post) do |form| %>
+      <%= form.search_field :query,
+                            id: "search_field",
+                            value: params[:query],
+                            autofocus: true,
+                            onfocus: "this.selectionStart = this.selectionEnd = this.value.length;"
+      %>
+    <% end %>
+  </div>
+
+  <div class="box box_gradient articles_box">
+    <ul id="articles_list">
+      <% @articles.each do |article| %>
+        <li><%= article.text %></li>
+      <% end %>
+    </ul>
+  </div>
+</body>
+
+<script>
+  var searchField = document.querySelector("#search_field");
+  var timer;
+
+  searchField.addEventListener("input", function() {
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      if (searchField.value !== searchField.defaultValue) {
+        searchField.form.submit();
+      }
+    }, 1500);
+  });
+</script>

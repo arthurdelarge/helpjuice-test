@@ -1,0 +1,31 @@
+<body>
+  <div>
+    <button class="button"><%= link_to "Articles", articles_path %></button>
+  </div>
+    <div class="column box_gradient">
+    <h2>Recent Local Searches:</h2>
+    <ul>
+      <% @recent_local.each do |search| %>
+        <li><%= search.query %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="column box_gradient">
+    <h2>Recent Global Searches:</h2>
+    <ul>
+      <% @recent_global.each do |search| %>
+        <li><%= "(#{search.ip_address}) #{search.query}" %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="column box_gradient">
+    <h2>Trending:</h2>
+    <ul>
+      <% @trending.each_with_index do |search, index| %>
+        <li><%= "#{index + 1}. #{search[0]} (#{search[1]} times)" %></li>
+      <% end %>
+    </ul>
+  </div>
+</body>
